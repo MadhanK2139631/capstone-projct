@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "test": "mocha ./src/tests/*.spec.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MadhanK2139631/capstone-projct.git"
@@ -17,9 +17,18 @@
   },
   "homepage": "https://github.com/MadhanK2139631/capstone-projct#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.2"
+  },
+  "devDependencies": {
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "rewire": "^9.0.1",
+    "sinon": "^21.0.0",
+    "sinon-chai": "^4.0.1"
   }
 }

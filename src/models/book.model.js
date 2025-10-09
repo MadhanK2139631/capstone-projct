@@ -1,5 +1,4 @@
 const mongoose= require('mongoose');
-const reviewSchema = require("../models/review.model")
 module.exports = mongoose =>{
 var schema = mongoose.Schema({
     title : String,

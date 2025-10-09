@@ -1,16 +1,16 @@
-const bookController = require("../controllers/book.controllers");
+const controller = require("../controllers/book.controllers");
 const { title, author, description,genre , published} = require("../validation-rule/book.validation");
 
 module.exports = (app) => {
-    app.post("/books", validate([title,author,description,genre,published]),bookController.add);
+    app.post("/books", validate([title,author,description,genre,published]),controller.add);
 
-    app.get("/books", bookController.findAll);
+    app.get("/books", controller.findAll);
 
-    app.get("/books/:id", bookController.getBookId);
+    app.get("/books/:id", controller.getBookId);
 
-    app.put("/books/:id", bookController.update);
+    app.put("/books/:id", controller.update);
 
-    app.post("/books/review/:id", bookController.addReview);
+    app.delete("/books/:id", controller.delete);
 }
 
 const validate = validations => {

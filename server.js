@@ -3,8 +3,7 @@ const cors=require("cors");
 const dbConfig=require("./src/config/db.config");
 
 
-
-const PORT=6969;
+const PORT=7000;
 
 const app=express();
 
@@ -36,6 +35,8 @@ db.mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 
 
 require("./src/routes/book.routes")(app);
+require("./src/routes/review.routes")(app);
+
 
 app.listen(PORT,()=>{
     console.log(`Server is running on port:${PORT}`)

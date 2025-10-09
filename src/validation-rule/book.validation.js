@@ -18,7 +18,7 @@ exports.author = body('author').notEmpty().withMessage('Author is required').isL
 
 exports.description = body('description').notEmpty().withMessage('Description is required').isLength({ max: 50 }).withMessage('Description cannot exceed 50 characters')
 
-exports.published = body('published').trim().notEmpty().withMessage('published is required').isISO8601().withMessage('Date shoulg be in yyyy-yy-dd formate').custom(async date => {
+exports.published = body('published').trim().notEmpty().withMessage('published is required').isISO8601().withMessage('Date shoulg be in yyyy-mm-dd formate').custom(async date => {
     let inputdate = new Date(date);
     let todaydate = new Date();
     try {
